@@ -41,12 +41,27 @@ public class Colecciones {
     }
 
     public static void ejemploHashSet() {
-        Set<String> colores = new HashSet<>();
-        colores.add("Rojo");
-        colores.add("Verde");
-        colores.add("Azul");
-        colores.add("Rojo");
-        System.out.println("Colores: " + colores);
+        Set<String> estudiantes = new HashSet<>();
+        estudiantes.add("Juan Pérez");
+        estudiantes.add("María García");
+        estudiantes.add("Carlos López");
+        estudiantes.add("Ana Martínez");
+        estudiantes.add("Juan Pérez");
+
+        System.out.println("Total de estudiantes únicos: " + estudiantes.size());
+        System.out.println("Lista de estudiantes: " + estudiantes);
+
+        if (estudiantes.contains("María García")) {
+            System.out.println("María García está en el conjunto");
+        }
+
+        estudiantes.remove("Carlos López");
+        System.out.println("Después de eliminar a Carlos López: " + estudiantes);
+
+        System.out.println("\nIterando con forEach:");
+        for (String estudiante : estudiantes) {
+            System.out.println("- " + estudiante);
+        }
     }
 
     public static void ejemploHashMap() {
@@ -62,6 +77,9 @@ public class Colecciones {
     }
 
     public static void main(String[] args) {
+        System.out.println("=== Ejemplo HashSet ===");
+        ejemploHashSet();
+        System.out.println("\n=== Ejemplo HashMap ===");
         ejemploHashMap();
     }
 
