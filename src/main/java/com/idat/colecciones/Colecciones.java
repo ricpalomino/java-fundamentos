@@ -18,7 +18,6 @@ public class Colecciones {
         numeros[2] = 30;
         numeros[3] = 40;
         numeros[4] = 50;
-        //numeros[5] = 60; // Esto causará un error de índice fuera de rango
         for (int i = 0; i < numeros.length; i++) {
             System.out.println("Número en índice " + i + ": " + numeros[i]);
         }
@@ -33,7 +32,7 @@ public class Colecciones {
         frutas.add("Manzana");
         frutas.add("Banana");
         frutas.add("Naranja");
-        System.out.println("Fruta Indice 1: " + frutas.get(1)); // Imprime "Banana"
+        System.out.println("Fruta Indice 1: " + frutas.get(1));
         frutas.remove("Banana");
         System.out.println("Frutas después de eliminar Banana: " + frutas);
         for (String fruta : frutas) {
@@ -46,7 +45,7 @@ public class Colecciones {
         colores.add("Rojo");
         colores.add("Verde");
         colores.add("Azul");
-        colores.add("Rojo"); // No se añadirá porque los sets no permiten duplicados
+        colores.add("Rojo");
         System.out.println("Colores: " + colores);
     }
 
@@ -57,15 +56,12 @@ public class Colecciones {
         edades.put("Juan", 25);
         edades.put("María", 30);
         edades.put("Pedro", 20);
-        System.out.println("Edad de María: " + edades.get("María")); // Imprime 30
+        System.out.println("Edad de María: " + edades.get("María"));
         edades.remove("Pedro");
         System.out.println("Edades después de eliminar a Pedro: " + edades);
     }
 
     public static void main(String[] args) {
-        //EjemploArrays();
-        //ejemploArrayList();
-        //ejemploHashSet();
         ejemploHashMap();
     }
 
